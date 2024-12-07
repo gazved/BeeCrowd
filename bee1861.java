@@ -4,9 +4,11 @@ public class bee1861 {
         Scanner sc = new Scanner(System.in);
         String Assassino;
         while(sc.hasNextLine()){
+            boolean morto;
             Assassino = sc.nextLine();
             String dead = sc.nextLine();
-            No x = new No(Assassino);
+            No x = new No(Assassino, false);
+
 
             
 
@@ -34,7 +36,7 @@ class No{
     }
     No Inserir(No i, String x)throws Exception{
         if(i == null){
-            i = new No(x);
+            i = new No(x, );
         }else if(i.elemento.compareTo(x)> 0){
             i.dir = Inserir(i.dir, x);
         }else if(i.elemento.compareTo(x) < 0){
